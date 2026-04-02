@@ -1,9 +1,9 @@
 import { useFinance } from "../context/FinanceContext"
+import { motion } from "framer-motion"
 
 export default function InsightsPage() {
   const { transactionList, totalIncome, totalExpenses, balance } = useFinance()
 
-  // Highest spending category
   const categoryTotals = transactionList
     .filter(t => t.type === "expense")
     .reduce((acc, t) => {
@@ -14,15 +14,12 @@ export default function InsightsPage() {
   const highestCategory = Object.entries(categoryTotals)
     .sort((a, b) => b[1] - a[1])[0]
 
-  // Biggest single expense
   const biggestExpense = transactionList
     .filter(t => t.type === "expense")
     .sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount))[0]
 
-  // Savings rate
   const savingsRate = ((balance / totalIncome) * 100).toFixed(1)
 
-  // Monthly spending
   const monthlySpending = transactionList
     .filter(t => t.type === "expense")
     .reduce((acc, t) => {
@@ -76,11 +73,15 @@ export default function InsightsPage() {
   return (
     <div className="space-y-6">
 
-      {/* Insight Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {insights.map((insight) => (
-          <div
+      {/* Insight Cards — 2x2 Grid with animations */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {insights.map((insight, index) => (
+          <motion.div
             key={insight.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.4 }}
+            whileHover={{ scale: 1.02 }}
             className={`bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border-l-4 ${insight.color}`}
           >
             <div className="flex items-start gap-4">
@@ -99,12 +100,17 @@ export default function InsightsPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Monthly Breakdown Table */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.4 }}
+        className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6"
+      >
         <h3 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4">
           📊 Monthly Breakdown
         </h3>
@@ -143,10 +149,15 @@ export default function InsightsPage() {
             })}
           </tbody>
         </table>
-      </div>
+      </motion.div>
 
       {/* Summary Bar */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.4 }}
+        className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6"
+      >
         <h3 className="text-base font-semibold text-gray-700 dark:text-gray-200 mb-4">
           💰 Income vs Expenses Overview
         </h3>
@@ -187,7 +198,7 @@ export default function InsightsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
     </div>
   )
