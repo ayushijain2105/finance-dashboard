@@ -1,6 +1,6 @@
 # 💰 FinanceIQ - Smart Money Tracking
 
-A responsive personal finance dashboard built with React + Vite, developed as part of an internship task.
+A responsive personal finance dashboard to track income, expenses, and spending insights — built with React + Vite.
 
 🌐 **Live Demo:** https://finance-dashboard-hi52.vercel.app
 
@@ -19,7 +19,10 @@ A responsive personal finance dashboard built with React + Vite, developed as pa
 - 📱 **Responsive Design** — Works across different screen sizes
 
 ---
+## 📸 Preview
+![Dashboard Preview]
 
+---
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
