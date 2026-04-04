@@ -20,7 +20,9 @@ A responsive personal finance dashboard to track income, expenses, and spending 
 
 ---
 ## 📸 Preview
-![Dashboard Preview]
+
+![Dashboard Preview](./Screenshot%202026-04-04%20221250.png)
+
 
 ---
 ## 🛠️ Tech Stack
