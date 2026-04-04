@@ -1,22 +1,10 @@
-# 💰 FinanceIQ — Interactive Finance Dashboard
+# 💰 FinanceIQ - Smart Money Tracking
 
-A clean, responsive, and interactive finance dashboard built as part of a frontend internship assignment.
+A responsive personal finance dashboard built with React + Vite, developed as part of an internship task.
 
----
+🌐 **Live Demo:** https://finance-dashboard-hi52.vercel.app
 
-## 🚀 Live Demo
-
-> Coming soon (add your deployment link here after deploying)
-
----
-
-## 📸 Screenshots
-
-### 🌞 Light Mode
-![Dashboard Light](./screenshots/dashboard-light.png)
-
-### 🌙 Dark Mode
-![Dashboard Dark](./screenshots/dashboard-dark.png)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://finance-dashboard-hi52.vercel.app)
 
 ---
 
