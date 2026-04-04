@@ -19,12 +19,6 @@ A responsive personal finance dashboard to track income, expenses, and spending 
 - 📱 **Responsive Design** — Works across different screen sizes
 
 ---
-## 📸 Preview
-
-![Dashboard Preview](./Screenshot%202026-04-04%20221250.png)
-
-
----
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
@@ -49,33 +43,6 @@ src/
 ├── pages/              # Dashboard, Transactions, Insights
 └── utils/              # Helper functions
 ```
-
----
-
-## ⚙️ Setup Instructions
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/finance-dashboard.git
-cd finance-dashboard
-```
-
-2. **Install dependencies**
-```bash
-npm install
-```
-
-3. **Start the development server**
-```bash
-npm run dev
-```
-
-4. **Open in browser**
-```
-http://localhost:5173
-```
-
----
 
 ## 🎭 Role Switching
 
@@ -108,3 +75,10 @@ Click the **Role button** in the top navbar to switch between:
 ## 👨‍💻 Author
 
 **Ayushi Jain**
+---
+
+## 📸 Preview
+![Dashboard Preview](./Screenshot%202026-04-04%20221156.png)
+![Dashboard Preview](./Screenshot%202026-04-04%20221228.png)
+![Dashboard Preview](./Screenshot%202026-04-04%20221250.png)
+
